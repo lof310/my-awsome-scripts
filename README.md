@@ -12,6 +12,9 @@ A collection of useful scripts for automation, development, and daily tasks.
 - Well-documented code
 - Regular updates
 
+## Scripts
+- `power-saver.sh` -- This script provides a power management solution for Linux laptops with four configurable power-saving levels (0=performance, 1=balanced, 2=saver, 3=extreme). It supports both **runtime** configuration (CPU governor, frequency limits, turbo boost, SMT, brightness, USB/PCI power management, SATA link power, WiFi/Bluetooth control) and **permanent** kernel parameters via GRUB. Features include automatic AC/battery detection, suspend/hibernate, status reporting, configuration backup/restore, self-installation to PATH, and dependency management for APT-based systems(Kali, Debian, Ubuntu).
+
 ## Usage
 
 Clone the repository and run the scripts as needed:
