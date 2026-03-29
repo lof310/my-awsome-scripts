@@ -614,6 +614,7 @@ install_deps() {
     apt update -qq
 
     log_info "Installing dependencies..."
+    # shellcheck disable=SC2086
     apt install -y $DEPENDENCIES
 
     # Create configuration directory
@@ -675,10 +676,10 @@ show_status() {
 
     echo -e "${BLUE}Available Templates:${NC}"
     if [[ -d "/usr/share/pandoc/data/templates" ]]; then
-        local templates
-        templates=$(ls /usr/share/pandoc/data/templates/*.latex 2>/dev/null | sed 's|.*/||;s|\.latex||' | head -10)
-        if [[ -n "$templates" ]]; then
-            echo "$templates" | sed 's/^/  /'
+        local templates_list
+        templates_list=$(find /usr/share/pandoc/data/templates -name "*.latex" -type f 2>/dev/null | head -10)
+        if [[ -n "$templates_list" ]]; then
+            while IFS= read -r tmpl; do echo "  $(basename "$tmpl" .latex)"; done <<< "$templates_list"
         else
             echo "  No custom templates found"
         fi
@@ -761,31 +762,26 @@ main() {
                 shift
                 ;;
             --input)
-                input="$1"
                 shift
                 input="$1"
                 shift
                 ;;
             --output)
-                output="$1"
                 shift
                 output="$1"
                 shift
                 ;;
             --input-dir)
-                input_dir="$1"
                 shift
                 input_dir="$1"
                 shift
                 ;;
             --output-dir)
-                output_dir="$1"
                 shift
                 output_dir="$1"
                 shift
                 ;;
             --level)
-                level="$1"
                 shift
                 level="$1"
                 shift

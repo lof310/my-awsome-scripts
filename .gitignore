@@ -1,0 +1,57 @@
+```bash
+# Scripts-specific ignores if needed
+*.sh.swp
+*.sh~
+*.tmp
+
+# General temp files
+*.tmp
+*.swp
+*~
+
+# Logs
+*.log
+
+# Environment files
+.env
+.env.local
+*.env.*
+
+# Dependencies (if any appear later)
+node_modules/
+.venv/
+venv/
+__pycache__/
+
+# Build artifacts (if any appear later)
+dist/
+build/
+target/
+*.pyc
+*.class
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.a
+*.out
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Coverage reports
+coverage/
+htmlcov/
+.coverage
+
+# Editors
+.vscode/
+.idea/
+
+# Cache directories
+.mypy_cache/
+.pytest_cache/
+.gradle/
+```
