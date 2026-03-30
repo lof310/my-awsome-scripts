@@ -17,7 +17,7 @@ A collection of useful scripts for automation, development, and daily tasks.
 - `power-saver.sh` -- This script provides a power management solution for Linux laptops with four configurable power-saving levels (0=performance, 1=balanced, 2=saver, 3=extreme). It supports both **runtime** configuration (CPU governor, frequency limits, turbo boost, SMT, brightness, USB/PCI power management, SATA link power, WiFi/Bluetooth control) and **permanent** kernel parameters via GRUB. Features include automatic AC/battery detection, suspend/hibernate, status reporting, configuration backup/restore, self-installation to PATH, and dependency management for APT-based systems(Kali, Debian, Ubuntu).
 - `mdnb2pdf.sh` -- This script is a Bash utility that converts Markdown files and Jupyter Notebooks into arXiv-compliant PDFs. It features four configurable conversion levels, native support for LaTeX math equations, and persistent configuration management via command-line arguments. The tool includes built-in validation for font embedding and file size limits, it installs necessary dependencies like Pandoc and TeX Live automatically.
 - `tiny-search.py` -- This is a lightweight Python file search tool that recursively scans directories for keyword matches in filenames and file contents. It uses multithreading for speed, supports configurable depth, file type filtering, and syntax highlighting of matches in color. The script also includes configuration management via JSON, logging, and a clean CLI interface.
-- `search.py` -- This is a tiny python script to search on the web.
+- `search.py` -- This is a tiny python script to search on the web. Can be used by AI Agents.
 
 ## Usage
 
