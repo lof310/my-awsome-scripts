@@ -44,7 +44,7 @@ def fmt_results(results: List[Dict[str, Any]], fmt: str = "text") -> str:
     return "\n\n".join([f"{r.get('title','')}\n{r.get('href','')}\n{r.get('body','')}" for r in results])
 
 
-def load_embeddings() -> SentenceTransformer:
+def load_embeddings():
     if not EMBEDDINGS_AVAILABLE:
         raise ImportError("Install: pip install sentence-transformers")
     CACHE_DIR.mkdir(parents=True, exist_ok=True)
